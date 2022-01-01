@@ -1,0 +1,8 @@
+[jobs.lab2]
+
+image = { source = "dockerfile", path = ".", tag = "pascal-lex-example" }
+
+run = [
+  "export CLASSPATH='./antlr-4.9.3-complete.jar:$CLASSPATH'",
+  "java main.java $input $ir",
+]
